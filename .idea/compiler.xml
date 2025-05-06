@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="FieldAudioRecorder" target="20" />
+      <module name="FieldAudioRecorder" target="19" />
     </bytecodeTargetLevel>
   </component>
 </project>
