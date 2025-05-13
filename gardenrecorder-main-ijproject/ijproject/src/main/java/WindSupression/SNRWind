@@ -1,0 +1,34 @@
+import numpy as np
+import soundfile as sf
+
+def compute_snr(clean, noisy):
+    noise = noisy - clean
+    signal_power = np.mean(clean ** 2)
+    noise_power = np.mean(noise ** 2)
+    return 10 * np.log10(signal_power / noise_power)
+
+def to_mono(audio):
+    if audio.ndim == 2:
+        return np.mean(audio, axis=1)
+    return audio
+
+original, sr = sf.read(r"path_to_original")
+noisy, _ = sf.read(r"path_to_noisy")
+suppressed, _ = sf.read(r"path_to_cleaned_version")
+
+original = to_mono(original)
+noisy = to_mono(noisy)
+suppressed = to_mono(suppressed)
+
+min_len = min(len(original), len(noisy), len(suppressed))
+original = original[:min_len]
+noisy = noisy[:min_len]
+suppressed = suppressed[:min_len]
+
+snr_noisy = compute_snr(original, noisy)
+snr_suppressed = compute_snr(original, suppressed)
+snr_improvement = snr_suppressed - snr_noisy
+
+print(f"SNR before suppression: {snr_noisy:.2f} dB")
+print(f"SNR after suppression: {snr_suppressed:.2f} dB")
+print(f"SNR improvement: {snr_improvement:.2f} dB")

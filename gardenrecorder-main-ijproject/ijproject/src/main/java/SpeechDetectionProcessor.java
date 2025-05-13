@@ -20,7 +20,7 @@ public class SpeechDetectionProcessor implements ManualAudioProcessor {
 
     public void processWithPitch(float[] floatBuffer, float pitch) {
         double energy = computeEnergy(floatBuffer);
-    
+        //System.out.println("Agg: " + aggressivenessLevel);
         boolean currentSpeech = false;
         if (aggressivenessLevel > 0) {
             currentSpeech = energy > 0.01;
