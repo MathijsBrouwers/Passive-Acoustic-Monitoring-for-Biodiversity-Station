@@ -5,6 +5,8 @@ import java.util.Queue;
 import javax.swing.JLabel;
 import javax.swing.SwingUtilities;
 
+//Processes speech detection
+
 public class SpeechDetectionProcessor implements ManualAudioProcessor {
     private  boolean isSpeech = false;
     private final JLabel speechStatusLabel;

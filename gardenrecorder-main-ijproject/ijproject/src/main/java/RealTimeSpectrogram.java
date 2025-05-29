@@ -2,6 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
+//Sketches spectrogram for GUI
+
 public class RealTimeSpectrogram extends JPanel {
 
     private final BufferedImage spectrogram;

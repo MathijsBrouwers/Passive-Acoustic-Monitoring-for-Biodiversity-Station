@@ -3,6 +3,7 @@ import noisereduce as nr
 import soundfile as sf
 import os
 
+#Reduce wind noise
 
 main_audio_path = r"path_to_noisy"
 noise_audio_path = r"path_to_sample_noise"

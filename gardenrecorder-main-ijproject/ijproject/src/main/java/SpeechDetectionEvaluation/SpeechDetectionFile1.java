@@ -4,9 +4,11 @@ package SpeechDetectionEvaluation;
 
 import be.tarsos.dsp.*;
 import be.tarsos.dsp.io.jvm.AudioDispatcherFactory;
-import be.tarsos.dsp.pitch.PitchProcessor;
 
 import java.io.File;
+
+
+//Evaluates ratio of speech detected in folder
 
 public class SpeechDetectionFile1 { //Based on only energy
     private static boolean isSpeech = false;
@@ -14,7 +16,6 @@ public class SpeechDetectionFile1 { //Based on only energy
     private static int amountYes = 0;
     private static int amountNo = 0;
     private static double ratioSpeechDetected = 0;
-    //private static boolean previousIsSpeech = false;
 
     public static void main(String[] args) {
 

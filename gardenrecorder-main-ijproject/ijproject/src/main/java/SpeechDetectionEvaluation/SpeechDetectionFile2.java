@@ -6,6 +6,8 @@ import be.tarsos.dsp.pitch.PitchProcessor;
 
 import java.io.File;
 
+//Evaluates ratio of speech detected in folder
+
 public class SpeechDetectionFile2 { //Based on energy and pitch (FFT_YIN)
     private static boolean isSpeech = false;
     private static float detectedPitch = 0;

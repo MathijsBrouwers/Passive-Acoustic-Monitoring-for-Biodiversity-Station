@@ -1,6 +1,8 @@
 import numpy as np
 import soundfile as sf
 
+#Evaluate wind noise suppression by computing SNR
+
 def compute_snr(clean, noisy):
     noise = noisy - clean
     signal_power = np.mean(clean ** 2)

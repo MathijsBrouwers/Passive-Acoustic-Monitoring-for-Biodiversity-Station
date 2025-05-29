@@ -1,5 +1,7 @@
 import be.tarsos.dsp.util.fft.FFT;
 
+//Processes spectrogram for GUI
+
 
 public class SpectrogramProcessor implements ManualAudioProcessor {
     private final RealTimeSpectrogram spectrogram;

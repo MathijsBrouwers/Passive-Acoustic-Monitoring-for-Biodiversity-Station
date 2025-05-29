@@ -69,7 +69,7 @@ import java.util.Enumeration;
 import java.util.Vector;
 
 import be.tarsos.dsp.pitch.Yin;
-import be.tarsos.dsp.util.fft.FFT;
+
 
 
 import be.tarsos.dsp.pitch.PitchDetectionResult;

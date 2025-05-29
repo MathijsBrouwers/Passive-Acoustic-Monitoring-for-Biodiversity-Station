@@ -12,6 +12,8 @@ import java.util.Queue;
 
 import java.io.File;
 
+//Evaluates ratio of speech detected in folder
+
 public class SpeechDetectionFile3_1 { //Based on energy and pitch and rolling average
     private static boolean isSpeech = false;
     private static float detectedPitch = 0;

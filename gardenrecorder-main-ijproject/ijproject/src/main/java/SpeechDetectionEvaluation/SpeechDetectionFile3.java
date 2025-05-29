@@ -3,14 +3,12 @@ package SpeechDetectionEvaluation;
 import be.tarsos.dsp.*;
 import be.tarsos.dsp.io.jvm.AudioDispatcherFactory;
 import be.tarsos.dsp.pitch.PitchDetectionResult;
-import be.tarsos.dsp.pitch.PitchProcessor;
 import be.tarsos.dsp.pitch.Yin;
-
-import java.util.LinkedList;
-import java.util.Queue;
 
 
 import java.io.File;
+
+//Evaluates ratio of speech detected in folder
 
 public class SpeechDetectionFile3 { //Based on energy and pitch and two subsequent checks
     private static boolean isSpeech = false;
